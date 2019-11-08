@@ -19,7 +19,7 @@ class CreateCategoriaTable extends Migration
     public function up()
     {
         Schema::create('categoria', function (Blueprint $table) {
-            $table->bigIncrements('id')->nullable(false);
+            $table->bigIncrements('id');
             $table->string('name');
 
         });

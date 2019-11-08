@@ -20,10 +20,10 @@ class CreateUsersTable extends Migration
         //Blueprint= para autocompletar al picar codigo
 
         Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id')->nullable(false);
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('email_verified_at');
             $table->string('password');
             $table->integer('tipo')->default(1);
             $table->rememberToken();
