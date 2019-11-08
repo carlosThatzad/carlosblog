@@ -13,6 +13,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        //METODO=create
+        //Clase / objeto =Schema
+        //tabla users
+        //Browser como funcion anónima = function (Blueprint $table)
+        //Blueprint= para autocompletar al picar codigo
+
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id')->nullable(false);
             $table->string('name');

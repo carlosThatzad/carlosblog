@@ -26,7 +26,7 @@ class CreateArticulosTable extends Migration
             $table->string('imagen');
             $table->integer('user_id');
             $table->integer('categoria_id');
-           // $table->rememberToken();
+            // $table->rememberToken();
             $table->timestamps();//fecha de creacion
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('categoria_id')->references('id')->on('categoria');
