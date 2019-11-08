@@ -19,7 +19,7 @@ class CreateArticulosTable extends Migration
             $table->bigInteger('categoria_id')->unsigned();
             $table->timestamps();//fecha de creacion
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('categoria_id')->references('id')->on('categoria');
+            $table->foreign('categoria_id')->references('id')->on('categorias');
         });
 
 
