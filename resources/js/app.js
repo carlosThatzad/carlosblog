@@ -6,6 +6,9 @@
 
 require('./bootstrap');
 
+require ('./jquery-3.4.1.js');
+require ('./popper.min.js');
+
 window.Vue = require('vue');
 
 /**
