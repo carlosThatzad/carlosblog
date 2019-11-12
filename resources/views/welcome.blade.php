@@ -6,7 +6,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #008000;
+                background-color: white;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;

@@ -11100,13 +11100,49 @@ a.text-dark:focus {
   }
 }
 
-body .home-base {
-  background-color: blue;
+section.homebase {
+  background: url(/images/fondoparallx.jpeg?a602d4b16e150afb02d48569411315cd);
+  /* Nuestra imagen de fondo */
   background-repeat: no-repeat;
   /* Indicamos que no se repetira */
   background-size: cover;
   /* Encajamos la imagen al 100% del ancho */
   background-attachment: fixed;
   /* Establecemos una posicion fija para la imagen */
+}
+
+section.homebase .articulo {
+  color: white;
+  background-color: #6c4675;
+  opacity: 0.8;
+}
+
+section.homebase .articulo .bt1 {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+section.homebase .articulo .botoninfo {
+  width: 15%;
+  height: 15%;
+  background-color: white;
+  opacity: 1;
+}
+
+section.homebase .articulo .line {
+  border-bottom: solid 3px orangered;
+}
+
+section.homebase .downnav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
