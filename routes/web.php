@@ -10,11 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('','StaticController@home');
+Route::get('articulo/{slug}','ArticleController@show')->name('articulo.show');
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/prueba', function () {
-    return view('prueba');
-});

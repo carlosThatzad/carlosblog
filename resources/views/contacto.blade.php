@@ -3,12 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <title>Laravel</title>
 </head>
 <body>
-<section class="homebase">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">CARLOSBLOG ~</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +19,7 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contacto">Contacto</a>
+                <a class="nav-link" href="#">Contacto</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,7 +36,7 @@
                     <a class="dropdown-item" href="#">Laravel</a>
                     <a class="dropdown-item" href="#">Bootstrap</a>
                     <a class="dropdown-item" href="#">XML</a>
-                   <!-- <div class="dropdown-divider"></div>-->
+                    <!-- <div class="dropdown-divider"></div>-->
 
                 </div>
             </li>
@@ -51,37 +50,47 @@
         </form>
     </div>
 </nav>
-<article>
-    <div class="container ">
-        @foreach($articulos as $articulo)
-        <div class="row articulo mt-5">
-            <div class="col align-self-center mt-2  " >
-                <h3 class="line mb-1" >{{ $articulo->titulo }}</h3> <h4>{{ $articulo->categoria->name }}</h4>
-                <p>{{$articulo->descripcion}}</p>
-                <div class="bt1">
-                    <a class="mb-3 botoninfo" href="{{ route('articulo.show', ['slug']) }}">ver mas</a>
-                </div>
+<section class="contactobase">
+
+    <form class="form-horizontal mt-5" role="form" method="post" action="index.php">
+     <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Nombre</label>
+         <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+         </div>
+     </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+         <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+         </div>
+        </div>
+        <div class="form-group">
+            <label for="message" class="col-sm-2 control-label">¿Que nos quieres decir?</label>
+            <div class="col-sm-10">
+            <textarea class="form-control" rows="4" name="message"></textarea>
             </div>
         </div>
-        @endforeach
-    </div>
-</article>
-    <footer>
-<div class="downnav mt-3">
-<nav aria-label="Page navigation example">
-    <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    </ul>
-</nav>
-</div>
-</footer>
-
-<script src="{{mix('js/app.js')}}"></script>
-
-</body>
+   <!-- <div class="form-group">
+        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="human" name="human" placeholder="Respuesta">
+        </div>
+    </div>-->
+        <div class="form-group">
+         <div class="col-sm-10 col-sm-offset-2">
+            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+          </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+            <! Will be used to display an alert to the user>
+            </div>
+        </div>
+    </form>
 </section>
+</body>
+<footer>
+
+</footer>
 </html>
