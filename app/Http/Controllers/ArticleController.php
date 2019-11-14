@@ -11,6 +11,10 @@ class ArticleController extends Controller
 
         $articulo = Articulo::where('slug', '=', $slug)->first();
 
+        if(empty($articulo)){
+            abort(404);
+        }
+
         return view('articulo')
             ->with('articulo', $articulo);
 

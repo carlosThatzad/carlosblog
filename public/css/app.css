@@ -11109,6 +11109,8 @@ section.homebase {
   /* Encajamos la imagen al 100% del ancho */
   background-attachment: fixed;
   /* Establecemos una posicion fija para la imagen */
+  width: 100%;
+  height: 100%;
 }
 
 section.homebase .articulo {
@@ -11144,5 +11146,16 @@ section.homebase .downnav {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
+}
+
+.page-footer {
+  background-color: #6c4675;
+  height: 100%;
+  position: relative;
+}
+
+.footimage {
+  width: 160px;
+  height: 120px;
 }
 

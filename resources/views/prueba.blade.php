@@ -59,7 +59,8 @@
                 <h3 class="line mb-1" >{{ $articulo->titulo }}</h3> <h4>{{ $articulo->categoria->name }}</h4>
                 <p>{{$articulo->descripcion}}</p>
                 <div class="bt1">
-                    <a class="mb-3 botoninfo" href="{{ route('articulo.show', ['slug']) }}">ver mas</a>
+                    <a class="mb-3 botoninfo" href="">ver mas</a>
+
                 </div>
             </div>
         </div>

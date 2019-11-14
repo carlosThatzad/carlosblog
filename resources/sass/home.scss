@@ -1,9 +1,10 @@
 section.homebase {
-
     background: url("../imagenes/fondoparallx.jpeg"); /* Nuestra imagen de fondo */
     background-repeat: no-repeat; /* Indicamos que no se repetira */
     background-size: cover; /* Encajamos la imagen al 100% del ancho */
     background-attachment: fixed; /* Establecemos una posicion fija para la imagen */
+    width: 100%;
+    height: 100%;
 .articulo{
     color:white;
     background-color: #6c4675;
@@ -34,4 +35,11 @@ section.homebase {
         justify-content: center;
 
     }
+
+
+}
+.page-footer{
+    background-color:#6c4675 ;
+    height: 100%;
+    position: relative;
 }
