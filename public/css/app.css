@@ -11129,10 +11129,7 @@ section.homebase .articulo .bt1 {
 }
 
 section.homebase .articulo .botoninfo {
-  width: 15%;
-  height: 15%;
-  background-color: white;
-  opacity: 1;
+  opacity: 2;
 }
 
 section.homebase .articulo .line {
@@ -11148,14 +11145,18 @@ section.homebase .downnav {
           justify-content: center;
 }
 
+section.homebase #imghom {
+  height: auto;
+}
+
 .page-footer {
   background-color: #6c4675;
   height: 100%;
   position: relative;
 }
 
-.footimage {
-  width: 160px;
-  height: 120px;
+#boximg {
+  -webkit-box-flex: 0;
+          flex: 0 0 0;
 }
 

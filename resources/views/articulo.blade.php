@@ -52,20 +52,20 @@
         </div>
     </nav>
         <div class="container-fluid ">
-            <div class="row d-flex justify-content-center mt-5 ">
+            <div class="row d-flex justify-content-center mt-5  ">
                   <div class="col-lg-8 d-flex flex-column align-items-center articulo ">
                       <h3 class=" mt-3 mb-1 line" >{{ $articulo->titulo }}</h3>
                       <h4 class="mt-2">{{ $articulo->categoria->name }}</h4>
 
-                      <div class="col-lg-6">
-                        <img class="img-fluid mb-4" src="{{ $articulo->imagen }}" alt="">
+                      <div id="boximg" class="col-lg-6">
+                        <img class="img-fluid mb-2" src="{{ $articulo->imagen }}" alt="">
                       </div>
                     <p>{{$articulo->contenido}}</p>
                   </div>
             </div>
         </div>
         </div>
-<!--FALTA LINKAR CADA UNO DE LOS BOTONES Y METERLOS EN UNA VISTA PARA PODER USARLA EN TODAS LAS PAGINAS-->
+
 <footer class="page-footer font-small mdb-color lighten-3 mt-4 pt-4">
 
     <div class="container mt-2">

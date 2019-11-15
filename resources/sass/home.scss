@@ -19,10 +19,9 @@ section.homebase {
     }
     .botoninfo{
 
-        width:15%;
-        height: 15%;
-        background-color:white;
-        opacity: 1;
+
+        //background-color:white;
+        opacity:2;
     }
 
 .line{
@@ -35,11 +34,16 @@ section.homebase {
         justify-content: center;
 
     }
-
+#imghom{
+    height:auto;
+}
 
 }
 .page-footer{
     background-color:#6c4675 ;
     height: 100%;
     position: relative;
+}
+#boximg{
+    flex:0 0 0;
 }
