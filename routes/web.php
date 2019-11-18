@@ -11,6 +11,9 @@
 |
 */
 Route::get('','StaticController@home');
+//Articulos
 Route::get('articulo/{slug}','ArticleController@show')->name('articulo.show');
 
-
+//Contacto
+/*Route::get('/contacto', 'ContactController@contact')->name('web.statics.contact');
+Route::post('/contacto', 'ContactController@contactSend')->name('web.statics.contactSend');*/
