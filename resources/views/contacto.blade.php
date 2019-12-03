@@ -9,7 +9,7 @@
 </head>
 <body>
 
-@include('layouts.admin')
+@include('layouts.header')
 @section('nav')
 @endsection
 <section class="contactobase">

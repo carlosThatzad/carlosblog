@@ -10,7 +10,7 @@
 <body>
 <section class="homebase">
 
-        @include('layouts.admin')
+        @include('layouts.header')
         @section('nav')
         @endsection
 
