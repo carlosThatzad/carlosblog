@@ -2,6 +2,7 @@
 
 namespace carlosblog\Http\Controllers;
 
+use carlosblog\Articulo;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $articulos = Articulo::orderBy('created_at', 'DESC')->paginate(5);
+
+        return view('admin.home')
+            ->with('articulos', $articulos);
+
     }
 }

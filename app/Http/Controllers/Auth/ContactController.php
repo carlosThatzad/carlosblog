@@ -14,6 +14,6 @@ use carlosblog\Http\Controllers\Controller;
 class ContactController extends Controller
 {
 public function contact(){
-    return view('contacto')
+    return view('contacto');
 }
 }
