@@ -13,12 +13,19 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        //METODO=create
+        //Clase / objeto =Schema
+        //tabla users
+        //Browser como funcion anónima = function (Blueprint $table)
+        //Blueprint= para autocompletar al picar codigo
+
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('email_verified_at');
             $table->string('password');
+            $table->integer('tipo')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });
