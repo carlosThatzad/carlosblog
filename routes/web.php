@@ -28,13 +28,9 @@ Route::resource('articulo', 'AdminController');
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function(){
     Route::get('', 'HomeController@index')->name('index');
     Route::get('articulo/{slug}','AdminController@edit')->name('articulo.edit');
-    Route::post('articulo/{slug}','AdminController@update')->name('articulo.update');
+    Route::post('articulo/{id}','AdminController@update')->name('articulo.update');
     Route::get('articulo/{id}/delete','AdminController@delete')->name('articulo.delete');
     Route::get('articulo/create','AdminController@create')->name('articulo.create');
-
-
-
-
 });
 
 

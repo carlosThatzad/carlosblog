@@ -4,7 +4,7 @@
 
 <div class="container col-md-8 col-md-offset-2">
     <div class="well well bs-component">
-        <form class="form-horizontal" method="POST">
+        <form class="form-horizontal" method="POST" >
             @foreach ($errors->all() as $error)
                 <div class="alert alert-danger">{{ $error }}</div>
             @endforeach
@@ -16,9 +16,9 @@
             {!! csrf_field() !!}
 
             <fieldset >
-                <legend>EDITAR POST</legend>
+                <legend style="color:white;font-size: 50px ">EDITAR POST</legend>
                 <div class="form-group">
-                    <label for="titulo" class="col-lg-label">Título</label>
+                    <label for="titulo" class="col-lg-label" style="color:white;font-size: 30px">Título</label>
                 <div class="col-lg-12">
                         <input type="text" class="form-control" id="titulo" name="titulo" value="{!!$articulo->titulo !!}">
                     </div>
@@ -27,8 +27,8 @@
                         <input type="text" class="form-control" id="descripcion" name="descripcion" value="{!!$articulo->descripcion !!}">
                     </div>
 
-                    <div class="col-lg-12 mt-5" >
-                        <textarea type="text" rows="30" cols="40" class="form-control " id="contenido" name="contenido" value="{!!$articulo->contenido !!}"></textarea>
+                    <div class="col-lg-12 mt-5 " >
+                        <input style="height: 100px; " type="text" rows="1" cols="80" class="form-control " id="contenido" name="contenido" value="{!!$articulo->contenido !!}">
                     </div>
                     <div class="col-lg-12  mt-5">
                         <input type="text" class="form-control" id="imagen" name="imagen" value="{!!$articulo->imagen !!}">
@@ -41,10 +41,10 @@
 
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                        <button class="ntm btn-primary" ><a href="{{route('admin.index')}}">Cancelar</a></button>
-                        <button type="submit" class="ntm btn-primary"><a href="{{ route('admin.articulo.delete',[$articulo->slug])}}">DElete</a></button>
+                        <button class="ntm btn-primary mt-5 mb-5" ><a href="{{route('admin.index')}}">Cancelar</a></button>
+                        <button type="submit" class="ntm btn-primary  mt-5 mb-5"><a href="{{ route('admin.articulo.delete',[$articulo->id])}}">DELETE</a></button>
 
-                        <button type="submit" class="ntm btn-primary"><a href="{{ route('admin.articulo.update',[$articulo->slug ])}}">Actualizar</a></button>
+                        <a href="{{ route('admin.articulo.update', $articulo->id )}}"><button type="submit" class="ntm btn-primary  mt-5 mb-5">Actualizar</button></a>
                     </div>
                 </div>
 

@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Administración</title>
-    <script>
+
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
     <link href="{{ admin_asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ admin_asset('css/font-awesome.css') }}" rel="stylesheet"/>
@@ -17,7 +18,7 @@
     <link href="{{ admin_asset('css/cropper.css') }}" rel="stylesheet">
     <link href="{{ admin_asset('css/custom-styles.css') }}" rel="stylesheet"/>
 
-    </script>
+
 </head>
 <body>
 <div id="wrapper">

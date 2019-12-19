@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 @section('content')
-<div class="articulo">
-    <button type="submit" class="ntm btn-primary"><a href="{{ route('admin.articulo.create')}}">CREATE</a></button>
-    <div class="btn-group">
+<div class="">
+
+    <div class="btn-group mt-5 ml-5">
         <a href="{{ route('articulo.create') }}" class="btn btn-info" >Añadir Articulo</a>
     </div>
 @foreach($articulos as $articulo)
@@ -15,14 +15,14 @@
                     <p class="col col-lg-5 ml-lg-5 ml-md-2 ml-sm-1">{{$articulo->descripcion}}</p>
                     <p class="ml-lg-3 ml-md-0 ml-sm-0 text-center ">Fecha de creación:<br><b>{{$articulo->created_at}}</b></p>
                 </div>
-                <div class="bt1"> <a href="{{ route('admin.articulo.edit',[$articulo->slug ])}}">Edit</a>
+                <div class="btn btn-info bt1  mb-5"> <a href="{{ route('admin.articulo.edit',[$articulo->slug ])}}">Edit</a>
 
 
 
 
             </div>
-          </div>
+          </div></div>
     @endforeach
 
-</div>
+
 @endsection

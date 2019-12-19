@@ -68,63 +68,90 @@ public function create(){
             'descripcion' => 'required',
             'contenido' =>'required',
             'imagen' =>'required',
-            'categoria_id'=>'integer'
+            'categoria_id'=>'required'
 
         ]);
         Articulo::create($request->all());
         return redirect()->route('admin.index')->with('success','Registro creado satisfactoriamente');
     }
-    public function update(Request $request, $id)    {
-
+    public function updatet(Request $request, $id)    {
+        dd($request);
        $articulo= Articulo::find($id);
+
+
+
+        if(!empty($articulo)){
+
+            $this->validate($request,[
+                'titulo' => 'required',
+                'descripcion' => 'required',
+                'contenido' =>'required',
+                'imagen' =>'required',
+                'categoria_id'=>'required',
+
+            ]);
+
+            Articulo::find($id)->update($request->all());
+            return redirect()->route('admin.index')->with('success','Registro actualizado satisfactoriamente');
+
+        }
+      else{
+          Abort(404,'Artículo no encontrado');
+
+
+      }
        //mirar que ha encontrado el id sino abort
 
 
 
 
-        $this->validate($request,[
-            'titulo' => 'required',
-            'descripcion' => 'required',
-            'contenido' =>'required',
-            'imagen' =>'required',
-            'categoria_id'=>'required|integer',
-
-        ]);
-
-        Articulo::find($id)->update($request->all());
-        return redirect()->route('admin.index')->with('success','Registro actualizado satisfactoriamente');
 
     }
-    public function updatet(Request $request, $slug)
+    public function update(Request $request , $id)
     {
-        $articulo = Articulo::where('slug', '=', $slug)->first();
+
+        $articulo = Articulo::where('id', '=', $id)->first();
+
         $this->validate(request(),[
             'titulo' => 'required',
             'descripcion' => 'required',
             'contenido' =>'required',
             'imagen' =>'required',
-            'categoria_id'=>'integer'
+            'categoria_id'=>'required'
 
         ]);
-       /* if(!is_object($articulo))
+
+
+
+
+        /* if(!is_object($articulo))
         {
             $articulo = new $articulo;
         }*/
+
+
         $articulo->titulo = Input::get('titulo');
         $articulo->descripcion= Input::get('descripcion');
         $articulo->contenido= Input::get('contenido');
         $articulo->imagen= Input::get('imagen');
         $articulo->categoria_id= Input::get('categoria_id');
 
-     /*return Articulo::update([
+
+        $articulo->save();
+
+//dd($articulo);
+
+    /* return Articulo::update([
             'titulo' => $articulo['titulo'],
             'descripcion' => $articulo['descripcion'],
             'contenido' => $articulo['contenido'],
             'imagen' => $articulo['imagen'],
             'categoria_id' => $articulo['categoria_id'],
             ]);*/
-        return view('admin.articulos.post_edit')->
-         with('articulo', $articulo);
+
+        return redirect()->route('admin.index')->with('success','Registro actualizado satisfactoriamente');
+       // return redirect()->route('admin.index');
+     // return redirect ('admin.articulos.post_edit');
        //return redirect('admin.articulos.post_edit');
     }
 }
