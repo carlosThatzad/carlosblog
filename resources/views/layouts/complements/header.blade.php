@@ -8,32 +8,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contacto">Contacto</a>
+                    <a class="nav-link" href="{{route('contact-us')}}">Contacto</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categorías
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">HTML</a>
-                        <a class="dropdown-item" href="#">CSS</a>
-                        <a class="dropdown-item" href="#">JS</a>
-                        <a class="dropdown-item" href="#">C++</a>
-                        <a class="dropdown-item" href="#">PHP</a>
-                        <a class="dropdown-item" href="#">MySQl</a>
-                        <a class="dropdown-item" href="#">Java</a>
-                        <a class="dropdown-item" href="#">Laravel</a>
-                        <a class="dropdown-item" href="#">Bootstrap</a>
-                        <a class="dropdown-item" href="#">XML</a>
-                        <!-- <div class="dropdown-divider"></div>-->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('articulos.categ', ["2"])}}">HTML</a>
 
-                    </div>
+
+
+                        </div>
+                    </a>
+
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="login" role="button" tabindex="-1" aria-disabled="true">Login</a>
+                    <a class="nav-link " href="/login" role="button" tabindex="-1" aria-disabled="true">Login</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">

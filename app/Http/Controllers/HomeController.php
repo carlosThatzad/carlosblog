@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $articulos = Articulo::orderBy('created_at', 'DESC')->paginate(5);
+        $articulos = Articulo::orderBy('created_at', 'DESC')->paginate(10);
 
         return view('admin.home')
             ->with('articulos', $articulos);

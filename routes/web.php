@@ -10,41 +10,41 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes(['register' => false]);
-/*Route::get('login', function()
-{
-    return redirect('auth/login');
-});
-*/
-
-/*Route::get('articulo/{slug}/edit','AdminController@edit');
-Route::patch('articulo/{slug}','AdminController@update')->name('articulo.update');*/
-/*
-Route::post('articulo/{slug}/updateT', 'AdminController@updateT');
-Route::get('articulo/{slug}/update','AdminController@update')->name('articulo.update');
-Route::get('articulo/{slug}/edit','AdminController@edit')->name('articulo.edit');*/
-
-Route::resource('articulo', 'AdminController');
-Route::prefix('admin')->name('admin.')->middleware('auth')->group(function(){
-    Route::get('', 'HomeController@index')->name('index');
-    Route::get('articulo/{slug}','AdminController@edit')->name('articulo.edit');
-    Route::post('articulo/{id}','AdminController@update')->name('articulo.update');
-    Route::get('articulo/{id}/delete','AdminController@delete')->name('articulo.delete');
-    Route::get('articulo/create','AdminController@create')->name('articulo.create');
-});
-
-
-Route::get('','StaticController@home');
-//Articulos
-Route::get('articulo/{slug}','ArticleController@show')->name('articulo.show');
-
 
 
 
 //Contacto
-/*Route::get('/contacto', 'ContactController@contact')->name('web.statics.contact');
-Route::post('/contacto', 'ContactController@contactSend')->name('web.statics.contactSend');*/
+Route::get('contact-us', 'ContactUSController@contactUS')->name('contact-us');
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
 
 
 
+
+
+//Articulos
+Route::get('articulo/{slug}','ArticleController@show')->name('articulo.show');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('','StaticController@home');
+Route::get('articulos/{categoria_id}','CategorieController@categ')->name('articulos.categ');
+
+//Admin
+Route::resource('articulo', 'AdminController');
+Auth::routes(['register' => false]);
+
+
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function(){
+    Route::get('tablehome','AdminController@showtable')->name('tablehome');
+    Route::get('articulo/create','AdminController@create')->name('articulo.create');
+    Route::get('', 'HomeController@index')->name('index');
+    Route::get('articulo/{id}','AdminController@edit')->name('articulo.edit');
+    Route::post('articulo/{id}','AdminController@update')->name('articulo.update');
+    Route::get('articulo/{slug}/delete','AdminController@delete')->name('articulo.delete');
+
+});
+
+
+
+//coments
+Route::resource('comments', 'CommentsController');
+Route::get('/{post_id}', 'CommentsController@show')->name('posts.show');
 

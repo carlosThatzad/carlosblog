@@ -4,7 +4,8 @@
 
 <div class="container col-md-8 col-md-offset-2">
     <div class="well well bs-component">
-        <form class="form-horizontal" method="POST" >
+        <form class="form-horizontal" method="POST" enctype="multipart/form-data">
+
             @foreach ($errors->all() as $error)
                 <div class="alert alert-danger">{{ $error }}</div>
             @endforeach
@@ -31,7 +32,8 @@
                         <input style="height: 100px; " type="text" rows="1" cols="80" class="form-control " id="contenido" name="contenido" value="{!!$articulo->contenido !!}">
                     </div>
                     <div class="col-lg-12  mt-5">
-                        <input type="text" class="form-control" id="imagen" name="imagen" value="{!!$articulo->imagen !!}">
+
+                        <img class="mb-4 d-flex align-items-center" style="width:100px"; src="{!! $articulo->imagen !!}"><input type="text" class="form-control" id="imagen" name="imagen" value="{!!$articulo->imagen !!}">
                     </div>
                     <div class="col-lg-12  mt-5">
                         <input type="text" class="form-control" id="categoria_id" name="categoria_id" value="{!!$articulo->categoria_id !!}">
@@ -44,7 +46,7 @@
                         <button class="ntm btn-primary mt-5 mb-5" ><a href="{{route('admin.index')}}">Cancelar</a></button>
                         <button type="submit" class="ntm btn-primary  mt-5 mb-5"><a href="{{ route('admin.articulo.delete',[$articulo->id])}}">DELETE</a></button>
 
-                        <a href="{{ route('admin.articulo.update', $articulo->id )}}"><button type="submit" class="ntm btn-primary  mt-5 mb-5">Actualizar</button></a>
+                        <a href="{{ route('admin.articulo.update', [$articulo->slug ])}}"><button type="submit" class="ntm btn-primary  mt-5 mb-5">Actualizar</button></a>
                     </div>
                 </div>
 

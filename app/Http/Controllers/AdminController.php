@@ -22,6 +22,16 @@ class AdminController extends Controller
         return view('admin');
 
     }
+    function showtable()
+    {
+
+        $articulos = Articulo::orderBy('created_at', 'DESC')->paginate(10);
+
+        return view('admin.tablehome')
+            ->with('articulos', $articulos);
+
+
+    }
     public function delete( $id )
     {
         $articulo = Articulo::find($id);
@@ -39,9 +49,12 @@ public function create(){
 
         return view('admin.articulos.create');
 }
-    public function edit($slug)
+
+
+
+    public function edit($id)
     {
-        $articulo = Articulo::where('slug', '=', $slug)->first();
+        $articulo = Articulo::where('slug', '=', $id)->first();
 
         return view('admin.articulos.post_edit')
             ->with('articulo', $articulo);
@@ -62,7 +75,14 @@ public function create(){
     }*/
     public function store(Request $request)
     {
-        //
+       // $img_type=$request['imagen'];
+
+       /* if (((strpos($img_type, "gif") || strpos($img_type, "jpeg") ||
+         strpos($img_type, "jpg")) || strpos($img_type, "png")))
+               {
+
+               }
+*/
         $this->validate($request,[
             'titulo' => 'required',
             'descripcion' => 'required',
@@ -73,6 +93,7 @@ public function create(){
         ]);
         Articulo::create($request->all());
         return redirect()->route('admin.index')->with('success','Registro creado satisfactoriamente');
+
     }
     public function updatet(Request $request, $id)    {
         dd($request);
@@ -107,10 +128,10 @@ public function create(){
 
 
     }
-    public function update(Request $request , $id)
+    public function update(Request $request , $slug)
     {
 
-        $articulo = Articulo::where('id', '=', $id)->first();
+        $articulo = Articulo::where('slug', '=', $slug)->first();
 
         $this->validate(request(),[
             'titulo' => 'required',
@@ -121,14 +142,21 @@ public function create(){
 
         ]);
 
+/*if($request->hasFile('imagen')){
+    $archivoFoto=$request->file('imagen');
+    $nombreFoto=time().$archivoFoto->getClientOriginalName();
+    $archivoFoto->move(public_path().'/imagenes/', $nombreFoto);
 
+    // esta es la línea que faltaba. Llamo a la foto del modelo y le asigno la foto recogida por el formulario de actualizar.
+    $articulo->imagen=$nombreFoto;
 
+}
+*/
 
         /* if(!is_object($articulo))
         {
             $articulo = new $articulo;
         }*/
-
 
         $articulo->titulo = Input::get('titulo');
         $articulo->descripcion= Input::get('descripcion');

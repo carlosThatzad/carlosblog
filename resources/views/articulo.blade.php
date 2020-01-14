@@ -11,7 +11,33 @@
                     <img class="img-fluid mb-2" src="{{ $articulo->imagen }}" alt="">
                   </div>
                 <p>{{$articulo->contenido}}</p>
+
               </div>
+
         </div>
-    </div>
+        <div class="row d-flex justify-content-center mt-2  ">
+            <div class="col-lg-8 d-flex flex-column align-items-center articulo ">
+        <div class="form-group mt-2">
+            <label for="exampleFormControlTextarea1">Comentarios:</label>
+            <div class="btn-group mb-3 ml-5 align-items-center">
+
+
+
+            </div>
+            <textarea class="form-control form11 " id="exampleFormControlTextarea1" rows="4"></textarea>
+
+
+
+        </div>
+            </div>
+        </div>
+
+
 @endsection
+
+
+
+
+
+
+

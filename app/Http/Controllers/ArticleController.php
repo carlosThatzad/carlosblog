@@ -20,5 +20,12 @@ class ArticleController extends Controller
 
     }
 
+    function categ($categoria_id){
 
+        $articulos =Articulo::where('categoria_id','=',$categoria_id)->all();
+        if(empty($articulos)){
+            abort(404);
+        }
+        return view('categoria')->with('articulos',$articulos);
+    }
 }

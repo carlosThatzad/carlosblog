@@ -24,7 +24,7 @@
 <div id="wrapper">
     <nav class="navbar navbar-default top-navbar" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="{{ route('admin.home') }}"></a>
+          <a class="navbar-brand" href="{{ route('admin.home') }}"></a>
         </div>
         <ul class="nav navbar-top-links navbar-right">
             <li class="dropdown">

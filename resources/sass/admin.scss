@@ -23,7 +23,7 @@ p {
   font-size: 1.1em;
   font-weight: 300;
   line-height: 1.7em;
-  color: #999;
+  color: black;
 }
 
 a, a:hover, a:focus {
@@ -79,4 +79,7 @@ textarea {
   color: #666;
   border: 1px solid #ccc;
   border-radius: 0px !important;
+}
+#exampleFormControlTextarea1{
+  width: 100px;
 }

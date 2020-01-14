@@ -8,8 +8,7 @@
             <div class="col-lg-2 col-md-12 mb-4">
 
                 <div  class=" footimage view overlay z-depth-1-half" style="width:160px;height: 120px;" >
-                    <img src="../imagenes/java.jpg" class="img-fluid"
-                         alt="">
+             <img src="../imagenes/java.jpg" class="img-fluid" alt="">
                     <a href="">
                         <div class="mask rgba-white-light"></div>
                     </a>
@@ -21,7 +20,7 @@
 
                 <div class=" footimage view overlay z-depth-1-half">
                     <img src="../imagenes/c++.png" class="img-fluid"
-                         alt="" style="width:160px;height: 120px;">
+                                                                                                alt="" style="width:160px;height: 120px;">
                     <a href="">
                         <div class="mask rgba-white-light"></div>
                     </a>
@@ -31,9 +30,9 @@
 
             <div class="col-lg-2 col-md-6 mb-4">
 
-                <div class=" footimage view overlay z-depth-1-half">
-                    <img src="../imagenes/html.jpg" class="img-fluid"
-                         alt="" style="width:160px;height: 120px;">
+                <div class=" footimage view overlay z-depth-1-half" >
+                  <img src="../imagenes/html.jpg" class="img-fluid"
+                         alt="" style="width:160px;height: 120px;" >
                     <a href="">
                         <div class="mask rgba-white-light"></div>
                     </a>
@@ -44,8 +43,8 @@
             <div class="col-lg-2 col-md-12 mb-4">
 
                 <div class="view overlay z-depth-1-half">
-                    <img src="../imagenes/javascript.jpg" class="img-fluid"
-                         alt="" style="width:160px;height: 120px;">
+                   <img src="../imagenes/javascript.jpg" class="img-fluid"
+                                                                                               alt="" style="width:160px;height: 120px;">
                     <a href="">
                         <div class="mask rgba-white-light"></div>
                     </a>
@@ -56,8 +55,8 @@
             <div class="col-lg-2 col-md-6 mb-4">
 
                 <div class="view overlay z-depth-1-half">
-                    <img src="../imagenes/mysql.jpg" class="img-fluid"
-                         alt="" style="width:160px;height: 120px;">
+                   <img src="../imagenes/mysql.jpg" class="img-fluid"
+                                                                                                alt="" style="width:160px;height: 120px;">
                     <a href="">
                         <div class="mask rgba-white-light"></div>
                     </a>
@@ -67,8 +66,8 @@
             <div class="col-lg-2 col-md-6 mb-4">
 
                 <div class="view overlay z-depth-1-half">
-                    <img src="../imagenes/php.png" class="img-fluid"
-                         alt="" style="width:160px;height: 120px;">
+                  <img src="../imagenes/php.png" class="img-fluid"
+                                                                                               alt="" style="width:160px;height: 120px;">
                     <a href="">
                         <div class="mask rgba-white-light"></div>
                     </a>

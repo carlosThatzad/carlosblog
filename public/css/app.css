@@ -11101,8 +11101,7 @@ a.text-dark:focus {
 }
 
 section.homebase {
-  background: url(/images/fondoparallx.jpeg?a602d4b16e150afb02d48569411315cd);
-  /* Nuestra imagen de fondo */
+  background: url(/images/pngtree-g20-summit-simple-business-background-image_233791.jpg?81e66c3ef3573c0b005345c1c78ac8bd);
   background-repeat: no-repeat;
   /* Indicamos que no se repetira */
   background-size: cover;
@@ -11114,8 +11113,8 @@ section.homebase {
 }
 
 section.homebase .articulo {
-  color: white;
-  background-color: #6c4675;
+  color: black;
+  background-color: #f8f9fa;
   opacity: 0.8;
 }
 
@@ -11150,7 +11149,7 @@ section.homebase #imghom {
 }
 
 .page-footer {
-  background-color: #6c4675;
+  background-color: gray;
   height: 100%;
   position: relative;
 }
@@ -11193,7 +11192,7 @@ p {
   font-size: 1.1em;
   font-weight: 300;
   line-height: 1.7em;
-  color: #999;
+  color: black;
 }
 
 a,
@@ -11257,5 +11256,9 @@ textarea {
   color: #666;
   border: 1px solid #ccc;
   border-radius: 0px !important;
+}
+
+#exampleFormControlTextarea1 {
+  width: 100px;
 }
 
