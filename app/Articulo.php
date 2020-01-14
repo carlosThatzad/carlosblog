@@ -3,6 +3,7 @@
 namespace carlosblog;
 
 use Illuminate\Database\Eloquent\Model;
+use PhpParser\Comment;
 
 class Articulo extends Model
 {
@@ -14,5 +15,10 @@ class Articulo extends Model
     public function categoria()
     {
         return $this->belongsTo(Categoria::class, 'categoria_id');
+    }
+
+    public function coments()
+    {
+        return $this->hasMany(Coment::class, 'post_id');
     }
 }

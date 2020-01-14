@@ -14,7 +14,6 @@
                         </div>
                         <div class="bt1">
                             <a class=" row btn-lg  mb-3 btn btn-dark botoninfo" href="{{ route('articulo.show', [$articulo->slug])}}">ver mas</a>
-
                         </div>
                     </div>
                 </div>

@@ -2,9 +2,11 @@
 
 namespace carlosblog\Http\Controllers;
 
-use carlosblog\Articulo;
 
-use Illuminate\Http\Request;
+
+use carlosblog\Articulo;
+use Illuminate\Requests;
+
 class ArticleController extends Controller
 {
     function show($slug){

@@ -45,6 +45,9 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function(){
 
 
 //coments
-Route::resource('comments', 'CommentsController');
-Route::get('/{post_id}', 'CommentsController@show')->name('posts.show');
+Route::resource('coments', 'ComentsController');
+//Route::get('/{post_id}', 'CommentsController@show')->name('posts.show');
+
+Route::get('/post/{id}', 'ComentsController@show')->name('posts.show');
+
 

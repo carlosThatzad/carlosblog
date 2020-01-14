@@ -17,9 +17,9 @@ class User extends Authenticatable
      */
 
 
-    public function comments()
+    public function coments()
     {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\Modelo\Coment');
     }
 
     protected $fillable = [

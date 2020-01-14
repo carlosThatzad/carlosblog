@@ -26,7 +26,20 @@
             </div>
             <textarea class="form-control form11 " id="exampleFormControlTextarea1" rows="4"></textarea>
 
+            <h3>Comments</h3>
+                {{ Form::open(['route' => ['coments.store'], 'method' => 'POST']) }}
+                <p>{{ Form::textarea('body', old('body')) }}</p>
+                {{ Form::hidden('post_id', $articulo->id) }}
+                <p>{{ Form::submit('Send') }}</p>
+                {{ Form::close() }}
 
+            @forelse ($articulo->coments as $coment)
+                <p> {{$coment->created_at}}</p>
+                <p>{{ $coment->body }}</p>
+                <hr>
+            @empty
+                <p>Este post no tiene comentarios añade el primero!</p>
+            @endforelse
 
         </div>
             </div>
