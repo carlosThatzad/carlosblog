@@ -18,13 +18,6 @@
         <div class="row d-flex justify-content-center mt-2  ">
             <div class="col-lg-8 d-flex flex-column align-items-center articulo ">
         <div class="form-group mt-2">
-            <label for="exampleFormControlTextarea1">Comentarios:</label>
-            <div class="btn-group mb-3 ml-5 align-items-center">
-
-
-
-            </div>
-            <textarea class="form-control form11 " id="exampleFormControlTextarea1" rows="4"></textarea>
 
             <h3>Comments</h3>
                 {{ Form::open(['route' => ['coments.store'], 'method' => 'POST']) }}

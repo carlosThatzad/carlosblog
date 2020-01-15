@@ -18,7 +18,12 @@
                         Categorías
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('articulos.categ', ["2"])}}">HTML</a>
-
+                            <a class="dropdown-item" href="{{ route('articulos.categ', ["3"])}}">CSS</a>
+                            <a class="dropdown-item" href="{{ route('articulos.categ', ["4"])}}">JS</a>
+                            <a class="dropdown-item" href="{{ route('articulos.categ', ["1"])}}">C++</a>
+                            <a class="dropdown-item" href="{{ route('articulos.categ', ["6"])}}">PHP</a>
+                            <a class="dropdown-item" href="{{ route('articulos.categ', ["7"])}}">MySQl</a>
+                            <a class="dropdown-item" href="{{ route('articulos.categ', ["8"])}}">Java</a>
 
 
                         </div>

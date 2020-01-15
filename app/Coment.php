@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace carlosblog;
 
 use Illuminate\Database\Eloquent\Model;
 use PhpParser\Comment;

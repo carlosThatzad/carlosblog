@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Support\Facades\Auth;
+use carlosblog\Http\Requests;
 
-use App\Http\Requests\ComentRequest;
+use carlosblog\Http\Requests\ComentRequest;
 
 
 class ComentsController extends Controller
@@ -21,7 +22,7 @@ class ComentsController extends Controller
      */
 
     public function __construct() {
-        $this->middleware('auth');
+       // $this->middleware('auth');
     }
 
 
